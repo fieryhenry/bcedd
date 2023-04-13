@@ -6,7 +6,7 @@ The Battle Cats Event Data Downloader (BCEDD) is a tool made for downloading bat
 
 ## Credits
 
-- The [PackPack Discord Bot](https://github.com/battlecatsultimate/PackPack) for the general structure of the cryptography to do
+- The [PackPack Discord Bot](https://github.com/battlecatsultimate/PackPack) for the general algorithm of the cryptography needed
 
 ## How To Use
 
