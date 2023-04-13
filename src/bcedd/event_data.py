@@ -6,7 +6,9 @@ import requests
 
 
 class EventData:
-    """Class for downloading event data from the Battle Cats servers."""
+    """Class for downloading event data from the Battle Cats servers.
+    Some code is taken from the PackPack discord bot:https://github.com/battlecatsultimate/PackPack
+    """
 
     def __init__(self, file_name: str, cc: str):
         """Initializes the EventData class.

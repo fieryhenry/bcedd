@@ -1,8 +1,12 @@
 # Battle Cats Event Data Downloader
 
-The Battle Cats Event Data Downloader (BCEDD) is a tool made for downloading battle cats event data such as gatya data and sale data
+The Battle Cats Event Data Downloader (BCEDD) is a tool made for downloading battle cats event data such as gatya data and sale data.
 
-PyPI: <https://pypi.org/project/bcedd>
+[PyPI](https://pypi.org/project/bcedd)
+
+## Credits
+
+- The [PackPack Discord Bot](https://github.com/battlecatsultimate/PackPack) for the general structure of the cryptography to do
 
 ## How To Use
 
