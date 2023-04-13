@@ -18,6 +18,8 @@ Run the following commands in command prompt or another terminal to install the 
 
 ### Installation
 
+To install / update the tool run the following command:
+
 ```bash
 py -m pip install -U bcedd
 ```
