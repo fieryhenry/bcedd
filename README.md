@@ -13,6 +13,7 @@ The Battle Cats Event Data Downloader (BCEDD) is a tool made for downloading bat
 ### Prerequisites
 
 - [Python](https://www.python.org/downloads/) for running and installing the tool
+
 Run the following commands in command prompt or another terminal to install the tool - If you are not using windows you will need to use `python` or `python3` instead of `py`
 
 ### Installation
