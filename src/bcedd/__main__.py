@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import filedialog
 from typing import Optional
 
-from bcedd import event_data
+from bcedd import event_data, game_version, country_code
 
 
 def save_file(name: str, data: bytes):
@@ -37,7 +37,7 @@ def save_file_no_dialog(name: str, data: bytes, output: str):
         f.write(data)
 
 
-def load_args() -> tuple[str, list[str], Optional[str]]:
+def load_args() -> tuple[str, list[str], Optional[str], bool]:
     """Loads the arguments from the command line.
 
     Returns:
@@ -65,17 +65,23 @@ def load_args() -> tuple[str, list[str], Optional[str]]:
         help="Output folder",
         default=None,
     )
+    parser.add_argument(
+        "--old",
+        help="Use the old event data domain and method (aws)",
+        action="store_true",
+    )
 
     args = parser.parse_args()
 
-    country_code: str = args.country_code
+    cc: str = args.country_code
     files: list[str] = args.files
     output: Optional[str] = args.output
+    use_old: bool = args.old
 
-    return country_code, files, output
+    return cc, files, output, use_old
 
 
-def download(country_code: str, files: list[str], output: Optional[str]):
+def download(cc: str, files: list[str], output: Optional[str], use_old: bool):
     """Downloads the files.
 
     Args:
@@ -83,10 +89,13 @@ def download(country_code: str, files: list[str], output: Optional[str]):
         files (list[str]): Files to download.
         output (Optional[str]): Output folder.
     """
+    gv = game_version.GameVersion.from_string("12.4.0")  # doesn't matter
     for file in files:
-        file_name = country_code + "_" + file
+        file_name = cc + "_" + file
         print(f"Downloading {file_name}...")
-        ed = event_data.EventData(file, country_code)
+        ed = event_data.EventData(
+            file, country_code.CountryCode.from_code(cc), gv, use_old
+        )
         if output is not None:
             save_file_no_dialog(file_name, ed.make_request().content, output)
         else:
@@ -95,8 +104,8 @@ def download(country_code: str, files: list[str], output: Optional[str]):
 
 def main():
     """Main function."""
-    country_code, files, output = load_args()
-    download(country_code, files, output)
+    cc, files, output, use_old = load_args()
+    download(cc, files, output, use_old)
 
 
 if __name__ == "__main__":
