@@ -26,12 +26,5 @@ setuptools.setup(
         "requests",
     ],
     include_package_data=True,
-    extras_require={
-        "testing": [
-            "pytest",
-            "pytest-cov",
-        ],
-    },
     package_data={"bcedd": ["py.typed"]},
-    flake8={"max-line-length": 160},
 )
