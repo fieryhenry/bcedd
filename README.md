@@ -6,7 +6,7 @@ The Battle Cats Event Data Downloader (BCEDD) is a tool made for downloading bat
 
 ## Credits
 
-- The [PackPack Discord Bot](https://github.com/battlecatsultimate/PackPack) for the general cryptography algorithm needed
+- The [PackPack Discord Bot](https://github.com/battlecatsultimate/PackPack) for the old method of downloading data (aws stuff)
 
 ## How To Use
 
@@ -61,6 +61,12 @@ py -m bcedd -o "Event Data"
 ```
 
 This will save all 3 en files to a folder called "Event Data" in the current working directory (use the `cd` command to change that)
+
+If you want to use the old method of downloading data then use `--old`
+
+```bash
+py -m bcedd --old
+```
 
 ## Install From Source
 
