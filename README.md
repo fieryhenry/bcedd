@@ -38,13 +38,13 @@ By default the tool will download `sale.tsv`, `gatya.tsv` and `item.tsv` for `en
 py -m bcedd
 ```
 
-If you want to download files for a different version use `-c <version>` Supported versions are `en`, `jp`, `kr`, `tw`.
+If you want to download files for different versions use `-c <version1> <version2> etc`. Supported versions are `en`, `jp`, `kr`, `tw`.
 
 ```bash
-py -m bcedd -c jp
+py -m bcedd -c jp kr
 ```
 
-This will download jp data instead
+This will download jp and kr data instead
 
 If you only want to download specific files then use `-f <file1> <file2> etc`. Supported files are `sale.tsv`, `gatya.tsv`, `item.tsv`.
 

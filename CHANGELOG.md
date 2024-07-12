@@ -1,5 +1,15 @@
 # Changelog
 
+# [1.2.0] - 2024-07-12
+
+### Added
+
+- Support for downloading multiple versions at once
+
+### Fixed
+
+- Crash if tkinter is not installed
+
 ## [1.1.0] - 2023-07-09
 
 ### Added
