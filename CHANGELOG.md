@@ -1,5 +1,11 @@
 # Changelog
 
+[1.2.1] - 2024-07-14
+
+### Added
+
+- Change request timeout from 5 seconds to 30 seconds
+
 # [1.2.0] - 2024-07-12
 
 ### Added
