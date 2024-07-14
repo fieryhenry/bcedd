@@ -32,7 +32,7 @@ class RequestHandler:
         Returns:
             requests.Response: Response from the server.
         """
-        return requests.get(self.url, headers=self.headers, timeout=5)
+        return requests.get(self.url, headers=self.headers, timeout=30)
 
     def post(self) -> requests.Response:
         """Sends a POST request.
@@ -40,4 +40,4 @@ class RequestHandler:
         Returns:
             requests.Response: Response from the server.
         """
-        return requests.post(self.url, headers=self.headers, data=self.data, timeout=5)
+        return requests.post(self.url, headers=self.headers, data=self.data, timeout=30)
